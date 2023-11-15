@@ -276,10 +276,6 @@
       <Project>{3b680ce3-ae28-476d-80a5-cdebb92ba9ca}</Project>
       <Name>MyDatabase</Name>
     </ProjectReference>
-    <ProjectReference Include="..\PersistanceGeneric\PersistanceGeneric.csproj">
-      <Project>{0dee14ad-f71c-45d9-8ab2-364b4047945a}</Project>
-      <Name>PersistanceGeneric</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

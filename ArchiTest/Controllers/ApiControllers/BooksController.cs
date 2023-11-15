@@ -10,8 +10,7 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using Entities;
 using MyDatabase;
-using PersistanceGeneric;
-using PersistanceGeneric.Repositories;
+
 
 namespace ArchiTest.Controllers.ApiControllers
 {
