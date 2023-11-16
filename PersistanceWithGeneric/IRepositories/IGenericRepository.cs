@@ -10,7 +10,7 @@ namespace PersistanceWithGeneric.IRepositories
     {
         IEnumerable<T> GetAll();
         T Get(int id);
-        void add(T enitity);
+        void Add(T enitity);
         void Remove(int id);
 
     }

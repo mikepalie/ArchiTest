@@ -10,7 +10,7 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using Entities;
 using MyDatabase;
-
+using PersistanceWithGeneric.Repositories;
 
 namespace ArchiTest.Controllers.ApiControllers
 {
@@ -20,20 +20,33 @@ namespace ArchiTest.Controllers.ApiControllers
         private BookRepository BookService;
         public BooksController()
         {
-            BookRepository bookService = new BookRepository(db);
+             BookService = new BookRepository(db);
         }
 
         // GET: api/Books
         public IHttpActionResult GetBooks()
         {
-            var books = BookService.GetAll().
-                Select(b => new { b.Title, b.NumberOfPages, b.Member });
+            var books = BookService.GetBooksWithMember().
+                Select(b => new { b.Title, b.NumberOfPages,b.Member.Name});
 
 
             return Json(books);
         }
 
-       
+        public IHttpActionResult GetBookById(int id)
+        {
+            var book = BookService.Get(id);
+            return Json(book);
+        }
+
+        [HttpGet]
+        [Route("api/books/orderby")]
+        public IHttpActionResult GetBooksOrderBy()
+        {
+            var books = BookService.GetBooksOrderBy();
+            return Json(books);
+        }
+
 
         protected override void Dispose(bool disposing)
         {

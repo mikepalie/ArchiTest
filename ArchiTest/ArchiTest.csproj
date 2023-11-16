@@ -183,6 +183,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ApiControllers\BooksController.cs" />
+    <Compile Include="Controllers\ApiControllers\MembersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -275,6 +276,10 @@
     <ProjectReference Include="..\MyDatabase\MyDatabase.csproj">
       <Project>{3b680ce3-ae28-476d-80a5-cdebb92ba9ca}</Project>
       <Name>MyDatabase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PersistanceWithGeneric\PersistanceWithGeneric.csproj">
+      <Project>{8a7afae4-f4e5-4b95-85c4-91cb3568e6fd}</Project>
+      <Name>PersistanceWithGeneric</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
